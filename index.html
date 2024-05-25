@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/icon/fontello-1950117f/css/fontello.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-sky-200">
+    <main class="w-full 2xl:container mx-auto relative overflow-hidden">
+        <section class="w-full flex flex-wrap justify-center items-center h-[100vh]">
+            <div class="lg:w-[40%] w-[350px] h-[600px] flex flex-wrap justify-center items-center">
+                <div id="calc"
+                    class="lg:w-[350px] bg-myback bg-no-repeat bg-fixed bg-cover h-[580px] w-full  shadow-myshadow flex flex-wrap justify-center items-center border-[1px] border-orange-600">
+                    <div class="w-full flex *:my-[20px] justify-center items-center ">
+                        <input id="inp" type="text"
+                            class="w-[95%] h-[60px] outline-none text-4xl bg-cyan-100 border-[4px]  border-red-600">
+                    </div>
+                    <div
+                        class="w-full lg:h-[75%] h-[80%] transition-all duration-[.4s] *:bg-sky-500 *:text-white *:rounded-lg flex flex-wrap justify-evenly ">
+                        <button onclick="del()" id="delete" value="AC"
+                            class="w-[70px] h-[60px] hover:bg-orange-500">AC</button>
+                        <button onclick="backspace()" id="back" value="backspace"
+                            class="w-[70px] h-[60px]  hover:bg-orange-500"><i
+                                class="icon-cancel-alt-filled"></i></button>
+                        <button onclick="btnnum('%')" id="mod" value="%"
+                            class="w-[70px] h-[60px]  hover:bg-orange-500">%</button>
+                        <button onclick="btnnum('/')" id="division" value="/"
+                            class="w-[70px] h-[60px] hover:bg-orange-500"><i class="icon-divide"></i></button>
+                        <button onclick="btnnum(7)" id="num7" value="7"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">7</button>
+                        <button onclick="btnnum(8)" id="num8" value="8"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">8</button>
+                        <button onclick="btnnum(9)" id="num9" value="9"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">9</button>
+                        <button onclick="btnnum('*')" id="multiple" value="*"
+                            class="w-[80px] h-[60px] hover:bg-orange-500"><i class="icon-cancel"></i></button>
+                        <button onclick="btnnum(4)" id="num4" value="4"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">4</button>
+                        <button onclick="btnnum(5)" id="num5" value="5"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">5</button>
+                        <button onclick="btnnum(6)" id="num6" value="6"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">6</button>
+                        <button onclick="btnnum('+')" id="inc" value="+"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">+</button>
+                        <button onclick="btnnum(1)" id="num1" value="1"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">1</button>
+                        <button onclick="btnnum(2)" id="num2" value="2"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">2</button>
+                        <button onclick="btnnum(3)" id="num3" value="3"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">3</button>
+                        <button onclick="btnnum('-')" id="dec" value="-"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">-</button>
+                        <button onclick="btnnum(0)" id="num0" value="0"
+                            class="w-[80px] h-[60px] hover:bg-orange-500">0</button>
+                        <button onclick="btnnum('.')" id="decimal" value="."
+                            class="w-[80px] h-[60px] hover:bg-orange-500">.</button>
+                        <button onclick="equal()" id="equ" value="="
+                            class="w-[125px] h-[60px] hover:bg-orange-500 text-2xl">=</button>
+                    </div>
+                </div>
+            </div>
+            <div class="group lg:w-[15%] w-[30%] z-50 flex cursor-pointer justify-end fixed right-0 bottom-0">
+                <img class="lg:w-[180px] lg:h-[180px] w-[220px] h-[180px] rounded-[50%]" src="assets/img/44.jpg" alt="">
+                <ul
+                    class="group-hover:visible group-hover:opacity-[1] absolute top-0 lg:right-[80%] right-[110%] list-none *:text-orange-600 rotate-[18deg] translate-y-[-13px] hover:*:text-sky-600 transition-all duration-[.4s] invisible opacity-0">
+                    <li class="mb-[15px] translate-x-[10px]"><a
+                            href="https://www.instagram.com/fateme_mohamadiian.fed?igsh=YzVkODRmOTdmMw=="><i
+                                class="icon-instagram text-[30px]"></i></a></li>
+                    <li class="mb-[15px]"><a href="http://www.linkedin.com/in/fateme-mohamadian-dev0824"><i
+                                class="icon-linkedin-2 text-[30px]"></i></a></li>
+                    <li class="mb-[15px] translate-x-[20px]"><a href="https://github.com/fatemeMohamadian"><i
+                                class=" icon-github-squared text-[30px]"></i></a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] top-[-50px] left-[10%]  animate-anime1">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-30px] left-[15%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] top-[-80px] left-[20%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] top-[-30px] left-[25%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] top-[-80px] left-[30%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] top-[-90px] left-[35%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-30px] left-[40%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-150px] left-[45%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-80px] left-[50%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-130px] left-[60%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-70px] left-[65%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-190px] left-[70%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-40px] left-[75%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-150px] left-[80%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-60px] left-[85%] animate-anime1"></div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] top-[-140px] left-[90%] animate-anime1"></div>
+        <!-- bootom section -->
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] bottom-[-50px] left-[10%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-30px] left-[15%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] bottom-[-80px] left-[20%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] bottom-[-30px] left-[25%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] bottom-[-80px] left-[30%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px]  bg-white absolute rounded-[50%] bottom-[-90px] left-[35%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-30px] left-[40%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-150px] left-[45%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-80px] left-[50%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-130px] left-[60%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-70px] left-[65%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-190px] left-[70%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-40px] left-[75%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-150px] left-[80%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-60px] left-[85%] animate-anime2">
+        </div>
+        <div class="box w-[20px] h-[20px] bg-white absolute rounded-[50%] bottom-[-140px] left-[90%] animate-anime2">
+        </div>
+    </main>
+    <script src="assets/js/master.js"></script>
+</body>
+
+</html>

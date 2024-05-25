@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .box{
+    background-color: rgb(63, 188, 255);
+} */
+@keyframes anime {
+    27% {
+        top: 0px;
+        transform: translateY(20px);
+    }
+    27.00000001% {
+        top: 0px;
+        transform: translateY(40px);
+    }
+}
+@keyframes animebt {
+    27% {
+        bottom: 0px;
+        transform: translateY(-20px);
+    }
+    27.00000001% {
+        bottom: 0px;
+        transform: translateY(-40px);
+    }
+}
+    
+
