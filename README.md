@@ -7,7 +7,7 @@
                                                            
 
                                                            
-![1](https://github.com/fatemeMohamadian/Calculator/assets/155579918/433b01d0-e984-41e9-ac13-6db0c86e4ba8)
+![1](https://github.com/fatemeMohamadian/Calculator/assets/155579918/0411752b-bfe0-463a-b139-4ae381be430e)
 
                                                           😎😉 
                                     
