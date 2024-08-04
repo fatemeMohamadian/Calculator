@@ -9,9 +9,7 @@
                                                            
 ![1](https://github.com/fatemeMohamadian/Calculator/assets/155579918/0411752b-bfe0-463a-b139-4ae381be430e)
 
-                                                          😎😉 
-                                    
-                                                          
+<h1 align="center">😎😉</h1>
 
  😉Developed by <a href="https://linkedin.com/in/fateme-mohamadian-dev0824" target="blank">Fatemeh Mohamadian</a>
 
